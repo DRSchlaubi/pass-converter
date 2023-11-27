@@ -1,7 +1,7 @@
 FROM node:21-alpine
 
-COPY . .
+WORKDIR /usr/app
+COPY ./ /usr/app
+RUN npm install
 
-
-RUN npm i
 ENTRYPOINT ["node", "app.js"]
